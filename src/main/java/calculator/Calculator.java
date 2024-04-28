@@ -24,8 +24,9 @@ public class Calculator {
         }
         return result;
     }
+
     private static void validate(String[] operator) {
-        if (operator.length < 3) {
+        if (operator.length < 3 || operator.length % 2 != 1) {
             throw new IllegalArgumentException("연산식이 유효하지 않습니다.");
         }
     }

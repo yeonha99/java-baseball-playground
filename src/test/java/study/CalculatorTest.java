@@ -18,7 +18,7 @@ public class CalculatorTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"2 +"})
+    @ValueSource(strings = {"2 +","2 + 3 * 4 / 2 +"})
     void 연산식이유효하지않으면오류가발생한다(String value) {
         String[] values = value.split(" ");
         assertThatThrownBy(
